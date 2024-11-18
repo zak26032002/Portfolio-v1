@@ -1,0 +1,150 @@
+
+/* ------------------------------------------STYLE DE LA PAGE----------------------------------------- */
+
+
+/* ------------------------------------------STYLE DE LA PAGE----------------------------------------- */
+
+  *{
+      margin: 0;
+      padding: 0;
+      font-family: "Lato" , serif;
+  }
+  
+  body{
+      scroll-behavior: smooth;
+  }
+
+
+/* ----------------------------------------------------STYLE BG IMAGE ---------------------------------- */
+
+
+.background-image {
+    position: absolute;  /* Position the image absolutely */
+    top: 0px;            /* Adjust this value to create space from the top */
+    left: 0;              /* Align it to the left */
+    width: 100%;          /* Stretch the image across the full width of the page */
+    height: 100vh;        /* Set the height of the background image (adjust as needed) */
+    background-image: url('img/projets-img.jpg'); /* Your image URL */
+    background-size: cover; /* Ensure the image covers the area */
+    background-position: center; /* Center the image */
+    z-index: -1;         /* Ensure it stays behind other content */
+}
+
+
+.title-main-project{
+    display: flex;
+    justify-content: center;   /* Horizontally center */
+    align-items: center;       /* Vertically center */
+    height: 100vh;             /* Set the same height as the background image */
+    position: absolute;        /* Position it absolutely on top of the background image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;              /* Set the text color */
+    font-size: 2em;            /* Adjust the font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow for better contrast */
+
+}
+
+.projects-title{
+    position: relative;
+    width: 100%;
+    margin-top: 100vh;
+    padding :20px;
+    text-align: center;
+    font-size: 25px;
+    box-sizing: border-box;
+    
+  }
+/* ----------------------------------------------------STYLE PROJECTS ---------------------------------- */
+
+
+.projects{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+/* ----------------------------------------------------STYLE PROJECTS GRID---------------------------------- */
+
+.card {
+    transition: transform 0.2s ease; /* Smooth transition for scaling */
+}
+
+.card:hover {
+    animation: bounce 1s forwards; /* Trigger the bounce animation on hover */
+    cursor:pointer;
+}
+
+.card.bounce {
+    animation: bounce 1s forwards; /* Trigger bounce animation class */
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1); /* Start at normal size */
+    }
+    20% {
+        transform: scale(1.1); /* First zoom in */
+    }
+    50% {
+        transform: scale(0.95); /* Slight shrink */
+    }
+    70% {
+        transform: scale(1.025); /* Second zoom in */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}
+
+
+
+
+.card {
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    height: 15rem;
+    transition: transform 0.3s ease; 
+
+  }
+
+.grid-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+}
+
+@media (min-width: 600px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+}
+  
+@media (min-width: 900px) {
+    .grid-container { grid-template-columns: repeat(3, 1fr); }
+}
+  
+
+
+
+/* ----------------------------------------------------APPEAR EFFECT---------------------------------- */
+
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+/* Visible state (no animation) */
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: opacity 1s, filter 1s, transform 1s;
+}
+

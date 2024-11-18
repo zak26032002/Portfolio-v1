@@ -1,0 +1,158 @@
+   /* Container for the entire work experience section */
+   .work-experience {
+    padding: 60px 20px;
+    background-color: white;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
+  /* Vertical Grid layout styles */
+  .grid-container-exp {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between grid items */
+    justify-items: center;
+    align-items: center;
+  }
+
+  /* Individual work experience card */
+  .grid-item-exp {
+    width: 100%; /* Ensure items take full width of the container */
+    max-width: 800px; /* Prevent cards from becoming too wide */
+    margin: 0 auto; /* Center the cards */
+  }
+
+  .experience-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .experience-card:hover {
+    transform: translateY(-10px); /* Lift card effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+  }
+
+  .job-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .company-name {
+    font-size: 18px;
+    color: #0077b6; /* Blue color */
+    margin-bottom: 5px;
+  }
+
+  .duration {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  .responsibilities {
+    font-size: 16px;
+    color: #555;
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  .responsibilities li {
+    margin-bottom: 10px;
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 28px;
+    }
+
+    .experience-card {
+      padding: 15px;
+    }
+
+    .job-title {
+      font-size: 22px;
+    }
+
+    .company-name {
+      font-size: 16px;
+    }
+
+    .duration {
+      font-size: 14px;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: opacity 1s, filter 1s, transform 1s;
+}
+
+/* ----------------------------------------------------STYLE PARALLAX ---------------------------------- */
+
+
+/* Parallax section with background image */
+.parallax-exp {
+    position: relative;
+    background-image: url('img/pexels-japy-1069798.jpg'); /* Replace with your image */
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px; /* Height of the parallax section */
+    width: 98%; /* Adjust this to control the width */
+    max-width: 1200px; /* Optional: maximum width if you want to limit it */
+    margin: 0 auto; /* Center horizontally */
+}
+    
+.parallax-exp .parallax-exp-title{
+    position: absolute;
+    top: 50%; /* Vertically center  */
+    left: 50%; /* Horizontally center  */
+    transform: translate(-50%, -50%); /* Offset the 50% positioning to truly center */
+    z-index: 2; /* Ensure the title is above the background */
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0.3, 0.5); /* Light shadow effect */
+}
+
+.metiersinfo {
+  max-width: 800px;
+  font-size: 15px;
+  line-height: 34.1px;
+  color: #666666;
+  font-weight: 400;
+  text-align: center;
+  margin:0 auto 40px auto;
+}
+
+.clickable-fiche {
+  color: #0091ea; /* Blue color for the clickable word */
+  text-decoration: none; /* Remove underline by default */
+  font-weight: bold; /* Optional: makes the word bold */
+  transition: text-decoration 0.3s ease-in-out; /* Smooth transition for underline */
+}
+
+.clickable-fiche:hover {
+  text-decoration: underline; /* Underline the word on hover */
+}

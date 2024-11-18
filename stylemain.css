@@ -1,0 +1,194 @@
+
+/* ------------------------------------------STYLE DE LA PAGE----------------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lato" , serif;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+
+/* ------------------------------------------STYLE VIDEO----------------------------------------- */
+
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; 
+}
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures the video covers the area without stretching */
+}
+
+
+/* ----------------------------------------------------STYLE MAIN TITLE ---------------------------------- */
+
+.main-title {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    color: white; 
+    text-align: center; 
+    font-size: 2em; 
+}
+
+.title{
+    font-family: "Libre Franklin" , sans-serif;
+}
+
+.subtitle{
+  font-family: "Lato" , sans-serif;
+}
+
+
+/* ----------------------------------------------------STYLE PROJECT PART ---------------------------------- */
+
+.projects-title{
+  position: relative;
+  width: 100%;
+  margin-top: 100vh;
+  padding :20px;
+  text-align: center;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+.projects{
+  scroll-margin-top: 100px;
+}
+
+.proj-subtitle{
+  color:#0091ea;
+  opacity: 1;
+}
+
+  
+/* ----------------------------------------------------STYLE PARALLAX ---------------------------------- */
+
+
+      /* Parallax section with background image */
+.parallax-proj {
+    position: relative;
+    background-image: url('img/projets-img.jpg'); /* Replace with your image */
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px; /* Height of the parallax section */
+}
+
+.parallax-proj .parallax-proj-title{
+  position: absolute;
+  top: 50%; /* Vertically center  */
+  left: 50%; /* Horizontally center  */
+  transform: translate(-50%, -50%); /* Offset the 50% positioning to truly center */
+  z-index: 2; /* Ensure the title is above the background */
+  font-size: 30px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0.3, 0.5); /* Light shadow effect */
+}
+/* ----------------------------------------------------STYLE BUTTON ---------------------------------- */
+
+
+.parallax-proj .button-container {
+    position: absolute;
+    top: 80%; /* Vertically center the button */
+    left: 50%; /* Horizontally center the button */
+    transform: translate(-50%, -50%); /* Offset the 50% positioning to truly center */
+    z-index: 2; /* Ensure the button is above the background */
+  }
+
+.animated-button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 0 0 2px white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .animated-button span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #2196F3;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .animated-button span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 5px #2195f360;
+    color: #ffffff;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+  }
+  
+  .animated-button:hover span:last-child {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+  }
+
+  /* ----------------------------------------------------STYLE EXPERIENCE ---------------------------------- */
+  
+  .exp-title{
+    position: relative;
+    width: 100%;
+    padding :20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 25px;
+    box-sizing: border-box;
+    
+  }
+  
+  .exp-subtitle{
+    color:#0091ea;
+  }
+
+  .news-title{
+    position: relative;
+    width: 100%;
+    padding :20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 25px;
+    box-sizing: border-box;
+    
+  }
+
+  .news-subtitle{
+    color:#0091ea;
+  }
